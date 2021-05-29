@@ -92,14 +92,15 @@ To create one commendation for certain lesson use create_commendation fumction w
 
 To create several commendations of a child you should define list of notes named words, than you should use create_commendation function with arguments child_name, subject and words (which was previously defined as a list):
 
-```words = ["Молодец!",
-          "Отлично!",
-          "Хорошо!",
-          "Гораздо лучше, чем я ожидал!",
-          "Ты меня приятно удивил!",
-          "Великолепно!",
-          "Прекрасно!",
-          "Ты меня очень обрадовал!"]
+```
+words = ["Молодец!",
+         "Отлично!",
+         "Хорошо!",
+         "Гораздо лучше, чем я ожидал!",
+         "Ты меня приятно удивил!",
+         "Великолепно!",
+         "Прекрасно!",
+         "Ты меня очень обрадовал!"]
 
 result = create_commendation("Фролов Иван", "Музыка", words)```
 
@@ -114,5 +115,9 @@ To start Django shell just use:
 `python manage.py shell`
 
 ## Tests
+
+To pass all tasks of the module use function:
+
+`main()`
 
 Use your browser to follow this address: [127.0.0.1:8000](http://127.0.0.1:8000) and check for data modifications
