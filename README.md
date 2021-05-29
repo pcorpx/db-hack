@@ -102,7 +102,8 @@ words = ["Молодец!",
          "Прекрасно!",
          "Ты меня очень обрадовал!"]
 
-result = create_commendation("Фролов Иван", "Музыка", words)```
+result = create_commendation("Фролов Иван", "Музыка", words)
+```
 
 ### Prerequisites
 
