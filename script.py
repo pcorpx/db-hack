@@ -1,7 +1,5 @@
 from datacenter.models import Schoolkid, Mark, Chastisement, Lesson, Commendation
 import random, logging, sys
-from datetime import datetime
-
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
