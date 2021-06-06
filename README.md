@@ -37,7 +37,7 @@ If you want to get only first mark add an optional argument first with the value
 To fix marks use function fix_marks. It has first positional argument child_name which is compulsory and two optional arguments: point_lte (default value is 3) and first (default value is "no").
 To fix all bad marks just provide function with child_name:
 
-`result = fix_marks(child_name="Фролов Иван")`
+`fixed_marks_number = fix_marks(child_name="Фролов Иван")`
 
 The function will return the number of bad marks were fixed.
 
