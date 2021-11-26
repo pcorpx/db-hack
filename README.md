@@ -7,7 +7,10 @@ This script was made for studying data manipulation of Django database using  sh
 You can use it by copying content into Django shell directly or putting this script into folder with manage.py and importing it in a shell.
 
 To import script in a shell use command:
-`from script import *`
+
+```python 
+from script import *
+```
 
 ###### Getting all children
 To get all children from db use function get_child wihout arguments (default argument have value "all"):
