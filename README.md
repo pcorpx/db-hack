@@ -36,13 +36,13 @@ all_marks = get_marks(child_name="Фролов Иван")
 To get bad marks use function get_marks. You should provide it with two arguments: first positional argument child_name is compulsory, second optional argument point_lte serves to filter marks by their value accordingly less or equal than value passed in the argument. (default value of point_lte is 5)
 
 ```python
-bad_marks = get_marks(child_name="Фролов Иван", points__lte=3)
+bad_marks = get_marks(child_name="Фролов Иван", points_lte=3)
 ```
 
 If you want to get only first mark add an optional argument first with the value of "yes" to the function get_marks:
 
 ```python
-first_mark = get_marks(child_name="Фролов Иван", points__lte = 3, first="yes")
+first_mark = get_marks(child_name="Фролов Иван", points_lte = 3, first="yes")
 ```
 
 ###### Fixing marks
