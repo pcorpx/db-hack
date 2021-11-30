@@ -39,7 +39,7 @@ def fix_marks(child_name, points_lte=3):
     marks = get_marks(child_name=child_name, points_lte=points_lte)
     if marks:
         fixed_marks_number = marks.update(points=5)
-        logger.info(f"{str(fixed_marks_number)} mark(`s) were changed")
+        logger.info(f"{fixed_marks_number} mark(`s) were changed")
         return fixed_marks_number
     else:
         logger.info("There are no bad points")
