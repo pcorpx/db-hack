@@ -27,27 +27,19 @@ def get_child(child_name):
         logger.warning("The children with certain name was not found")
 
 
-def get_marks(child_name, points_lte=5, first="no"):
+def get_marks(child_name, points_lte=5):
     child = get_child(child_name=child_name)
     if child:
         marks = Mark.objects.filter(points__lte=points_lte,
                                     schoolkid=child)
-        if first == "yes":
-            first_mark = marks.first()
-            return first_mark
         return marks
 
 
-def fix_marks(child_name, points_lte=3, first="no"):
-    marks = get_marks(child_name=child_name, points_lte=points_lte,
-                      first=first)
-    if marks and first == "yes":
-        marks.points = 5
-        logger.info("First mark was changed")
-        return marks
-    elif marks:
+def fix_marks(child_name, points_lte=3):
+    marks = get_marks(child_name=child_name, points_lte=points_lte)
+    if marks:
         fixed_marks_number = marks.update(points=5)
-        logger.info(f"{str(fixed_marks_number)} marks were changed")
+        logger.info(f"{str(fixed_marks_number)} mark(`s) were changed")
         return fixed_marks_number
     else:
         logger.info("There are no bad points")
