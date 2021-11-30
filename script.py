@@ -121,9 +121,6 @@ def create_commendation(child_name, subject, commendation_content, date=None):
             subject=lesson.subject,
             teacher=lesson.teacher
         )
-        created_commendation.save()
-        created_date = created_commendation.created.strftime("%Y-%m-%d")
-        created_commendation.created = created_date
         return created_commendation
 
 
