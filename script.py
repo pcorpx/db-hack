@@ -45,15 +45,14 @@ def fix_marks(child_name, points_lte=3):
         logger.info("There are no bad points")
 
 
-def get_chastisements(child_name="all"):
+def get_chastisements(child_name):
     chastisements = Chastisement.objects.all()
-    if child_name != "all":
-        child = get_child(child_name=child_name)
-        if child:
-            chastisements = chastisements.filter(
-                schoolkid=child)
-        else:
-            return
+    child = get_child(child_name=child_name)
+    if child:
+        chastisements = chastisements.filter(
+            schoolkid=child)
+    else:
+        return
     return chastisements
 
 
@@ -73,12 +72,10 @@ def remove_chastisements(child_name):
     return removed_chastisements_number
 
 
-def get_lessons(child_name="all", subject=None):
+def get_lessons(child_name, subject=None):
     child = get_child(child_name=child_name)
     if child:
         lessons = Lesson.objects.all()
-        if child_name == "all":
-            return lessons
         lessons = lessons.filter(year_of_study=child.year_of_study,
                                  group_letter=child.group_letter)
         if subject:
