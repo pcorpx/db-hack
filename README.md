@@ -39,12 +39,6 @@ To get bad marks use function get_marks. You should provide it with two argument
 bad_marks = get_marks(child_name="Фролов Иван", points_lte=3)
 ```
 
-If you want to get only first mark add an optional argument first with the value of "yes" to the function get_marks:
-
-```python
-first_mark = get_marks(child_name="Фролов Иван", points_lte = 3, first="yes")
-```
-
 ###### Fixing marks
 
 To fix marks use function fix_marks. It has first positional argument child_name which is compulsory and two optional arguments: point_lte (default value is 3) and first (default value is "no").
@@ -55,14 +49,6 @@ fixed_marks_number = fix_marks(child_name="Фролов Иван")
 ```
 
 The function will return the number of bad marks were fixed.
-
-To fix only first bad mark provide function with optional argument first with the value of "yes":
-
-```python
-fixed_mark = fix_marks(child_name="Фролов Иван", first="yes")
-```
-
-The function will retun the fixed mark.
 
 ###### Getting chastisements
 
