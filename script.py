@@ -59,8 +59,7 @@ def get_chastisements(child_name):
 def remove_chastisements(child_name):
     chastisements = get_chastisements(child_name=child_name)
     if chastisements:
-        removed_chastisements_number = chastisements.delete()
-        removed_chastisements_number = removed_chastisements_number[0]
+        removed_chastisements_number, _ = chastisements.delete()
         message_info = (
             f"{removed_chastisements_number} "
             f"chastisements were removed"
